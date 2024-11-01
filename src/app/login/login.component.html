@@ -1,0 +1,54 @@
+<!-- Contenedor principal del formulario de login -->
+<div class="login-container">
+    <!-- Título del formulario de login -->
+    <h2>CUSTOMER LOGIN</h2>
+    
+    <!-- Formulario reactivo de Angular -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Grupo de entrada para el correo electrónico -->
+      <div class="input-group">
+        <label>
+          <!-- Icono de correo utilizando Font Awesome -->
+          <i class="fas fa-envelope"></i>
+          <!-- Campo de entrada para el correo electrónico -->
+          <input id="email" formControlName="email" type="email" placeholder="email">
+          
+          <!-- Mensajes de error para el campo de correo electrónico -->
+          <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+            <small *ngIf="loginForm.get('email')?.errors?.['required']">Email es requerido.</small>
+            <small *ngIf="loginForm.get('email')?.errors?.['email']">Email no es válido.</small>
+          </div>
+        </label>
+      </div>
+      
+      <!-- Grupo de entrada para la contraseña -->
+      <div class="input-group">
+        <label>
+          <!-- Icono de candado utilizando Font Awesome -->
+          <i class="fas fa-lock"></i>
+          <!-- Campo de entrada para la contraseña -->
+          <input id="password" formControlName="password" type="password" placeholder="password">
+          
+          <!-- Mensajes de error para el campo de contraseña -->
+          <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+            <small *ngIf="loginForm.get('password')?.errors?.['required']">Contraseña es requerida.</small>
+            <small *ngIf="loginForm.get('password')?.errors?.['minlength']">Contraseña debe tener al menos 6 caracteres.</small>
+          </div>
+        </label>
+      </div>
+      
+      <!-- Opciones adicionales como recordar usuario y recuperar contraseña -->
+      <div class="options">
+        <label>
+          <!-- Checkbox para recordar el inicio de sesión -->
+          <input type="checkbox" formControlName="rememberMe" /> Remember me
+        </label>
+        <!-- Enlace para recuperar la contraseña -->
+        <a href="#">Forgot Password?</a>
+      </div>
+      
+      <!-- Botón de envío del formulario -->
+      <button type="submit" [disabled]="loginForm.invalid">LOGIN</button>
+    </form>
+  </div>

@@ -1,0 +1,95 @@
+/* Aplicar box-sizing a todos los elementos para un mejor control de layout */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif; /* Fuente principal */
+  display: flex; /* Usar flexbox para centrar el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Altura completa de la ventana */
+  margin: 0; /* Eliminar márgenes predeterminados */
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* Fondo con gradiente */
+}
+
+/* Contenedor del formulario de login */
+.login-container {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  padding: 40px; /* Espacio interior */
+  border-radius: 15px; /* Bordes redondeados */
+  width: 300px; /* Ancho fijo */
+  text-align: center; /* Centrar texto */
+  color: white; /* Color del texto */
+}
+
+/* Estilo del título del formulario */
+.login-container h2 {
+  margin-bottom: 20px; /* Espacio inferior */
+  font-size: 24px; /* Tamaño de fuente */
+  color: #ffffff; /* Color del texto */
+}
+
+/* Grupo de entrada de datos */
+.input-group {
+  margin-bottom: 15px; /* Espacio inferior */
+  display: flex; /* Usar flexbox para alinear elementos */
+  align-items: center; /* Alinear verticalmente */
+  border-bottom: 1px solid #ddd; /* Línea inferior */
+  padding: 5px; /* Espacio interior */
+}
+
+/* Estilo de las etiquetas dentro de los grupos de entrada */
+.input-group label {
+  display: flex; /* Usar flexbox para alinear elementos */
+  align-items: center; /* Alinear verticalmente */
+  width: 100%; /* Ancho completo */
+}
+
+/* Estilo de los iconos dentro de las etiquetas */
+.input-group i {
+  margin-right: 10px; /* Espacio a la derecha */
+  color: #ffffff; /* Color del icono */
+}
+
+/* Estilos de los campos de entrada */
+.input-group input {
+  background: transparent; /* Fondo transparente */
+  border: none; /* Sin bordes */
+  outline: none; /* Sin contorno al enfocar */
+  color: white; /* Color del texto */
+  width: 100%; /* Ancho completo */
+}
+
+/* Opciones adicionales debajo del formulario */
+.options {
+  display: flex; /* Usar flexbox para alinear elementos */
+  justify-content: space-between; /* Espacio entre elementos */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-size: 14px; /* Tamaño de fuente */
+  color: #ffffff; /* Color del texto */
+}
+
+/* Estilos de los enlaces dentro de las opciones */
+.options a {
+  color: #bbb; /* Color del enlace */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos del botón de login */
+button {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espacio interior */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #4c8bf5; /* Color de fondo */
+  color: white; /* Color del texto */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+}
+
+/* Efecto hover para el botón de login */
+button:hover {
+  background-color: #3a76d3; /* Cambiar color de fondo al pasar el cursor */
+}
